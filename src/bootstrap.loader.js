@@ -165,7 +165,7 @@ You can use default ones:
 
     const styleLoaders = (
       config.extractStyles ?
-      buildExtractStylesLoader(styleLoadersWithSourceMapsAndResolveUrlLoader) :
+      buildExtractStylesLoader(styleLoadersWithSourceMapsAndResolveUrlLoader, config.extractStylesOptions) :
       joinLoaders(styleLoadersWithSourceMapsAndResolveUrlLoader)
     );
     const bootstrapStylesLoader = (

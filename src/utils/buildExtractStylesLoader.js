@@ -5,7 +5,7 @@
  * @returns {string}
  */
 
-export default function(loaders) {
+export default function(loaders, options = {}) {
   if (!loaders[0].startsWith('style')) {
     throw new Error(`
 If you want to use 'extract-text-webpack-plugin' make sure
@@ -29,5 +29,5 @@ Make sure it's installed in your 'node_modules/' directory.
       .map(loader => `${loader}!`)
       .join('')
   );
-  return ExtractTextPlugin.extract('style', restLoaders);
+  return ExtractTextPlugin.extract('style', restLoaders, options);
 }
