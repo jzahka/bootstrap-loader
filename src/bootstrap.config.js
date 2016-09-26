@@ -135,6 +135,7 @@ export default function createConfig({
     useFlexbox: userConfig.useFlexbox,
     useCustomIconFontPath: userConfig.useCustomIconFontPath,
     extractStyles: extractStyles || getEnvProp('extractStyles', userConfig),
+    extractStylesOptions: userConfig.extractStylesOptions,
     styleLoaders: userConfig.styleLoaders,
     styles: selectUserModules(userConfig.styles, defaultConfig.styles),
     scripts: selectUserModules(userConfig.scripts, defaultConfig.scripts),
